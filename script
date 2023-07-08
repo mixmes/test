@@ -1,0 +1,5 @@
+#!/bin/bash
+cd /home/mish/IdeaProjects/demo
+mvn clean package
+cd target
+java -jar demo-2.7.12.jar

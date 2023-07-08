@@ -1,0 +1,143 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1
+      author: mish
+      changes:
+        - createTable:
+            tableName: users_tab
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: username
+                  type: text
+                  constraints:
+                    nullable: false
+              - column:
+                  name: role
+                  type: text
+                  constraints:
+                    nullable: false
+              - column:
+                  name: password
+                  type: text
+                  constraints:
+                    nullable: false
+  - changeSet:
+      id: 2
+      author: mish
+      changes:
+        - createTable:
+            tableName: persons
+            columns:
+              - column:
+                  name: age
+                  type: SMALLINT
+              - column:
+                  name: name
+                  type: text
+                  constraints:
+                    nullable: false
+              - column:
+                  name: id
+                  type: BIGINT
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+  - changeSet:
+      id: 3
+      author: mish
+      changes:
+        - createTable:
+            tableName: owners
+            columns:
+              - column:
+                  name: age
+                  type: text
+              - column:
+                  name: name
+                  type: text
+
+              - column:
+                  name: id
+                  type: BIGINT
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+  - changeSet:
+      id: 4
+      author: mish
+      changes:
+        - createTable:
+            tableName: houses
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+              - column:
+                  name: address
+                  type: text
+                  constraints:
+                    nullable: false
+  - changeSet:
+      id: 5
+      author: mish
+      changes:
+        - createTable:
+            tableName: houses_tenants
+            columns:
+              - column:
+                  name: house_id
+                  type: BIGINT
+                  constraints:
+                    nullable: false
+              - column:
+                  name: tenants_id
+                  type: BIGINT
+                  constraints:
+                    nullable: false
+                    unique: true
+  - changeSet:
+      id: 6
+      author: mish
+      changes:
+        - createTable:
+            tableName: owners_houses
+            columns:
+              - column:
+                  name: owner_id
+                  type: BIGINT
+                  constraints:
+                    nullable: false
+              - column:
+                  name: houses_id
+                  type: BIGINT
+                  constraints:
+                    nullable: false
+                    unique: true
+  - changeSet:
+      id: 7
+      author: mish
+      changes:
+        - createTable:
+            tableName: hibernate_sequence
+            columns:
+              - column:
+                  name: next_val
+                  type: BIGINT
+                  autoIncrement: true
+
+
+
+
+
+
+
