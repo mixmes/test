@@ -1,13 +1,12 @@
-package com.example.demo.rest;
+package com.example.demo.rest.assemblers;
 
-import com.example.demo.controllers.HouseController;
+import com.example.demo.rest.controllers.HouseController;
 import com.example.demo.model.House;
 import org.springframework.hateoas.EntityModel;
 import org.springframework.hateoas.server.RepresentationModelAssembler;
 import org.springframework.hateoas.server.mvc.WebMvcLinkBuilder;
 import org.springframework.stereotype.Service;
 
-import javax.swing.text.html.parser.Entity;
 @Service
 public class HouseModelAssembler implements RepresentationModelAssembler<House, EntityModel<House>> {
     @Override

@@ -1,10 +1,7 @@
-package com.example.demo.rest;
+package com.example.demo.rest.assemblers;
 
-import com.example.demo.controllers.OwnerController;
-import com.example.demo.controllers.PersonController;
+import com.example.demo.rest.controllers.OwnerController;
 import com.example.demo.model.Owner;
-import org.hibernate.EntityMode;
-import org.springframework.hateoas.CollectionModel;
 import org.springframework.hateoas.EntityModel;
 import org.springframework.hateoas.server.RepresentationModelAssembler;
 import org.springframework.hateoas.server.mvc.WebMvcLinkBuilder;

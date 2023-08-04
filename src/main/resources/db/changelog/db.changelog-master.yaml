@@ -123,17 +123,7 @@ databaseChangeLog:
                   constraints:
                     nullable: false
                     unique: true
-  - changeSet:
-      id: 7
-      author: mish
-      changes:
-        - createTable:
-            tableName: hibernate_sequence
-            columns:
-              - column:
-                  name: next_val
-                  type: BIGINT
-                  autoIncrement: true
+
 
 
 

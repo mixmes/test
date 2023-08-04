@@ -1,8 +1,8 @@
-package com.example.demo.controllers;
+package com.example.demo.rest.controllers;
 
 import com.example.demo.data.HouseDataService;
 import com.example.demo.model.House;
-import com.example.demo.rest.HouseModelAssembler;
+import com.example.demo.rest.assemblers.HouseModelAssembler;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.hateoas.CollectionModel;
 import org.springframework.hateoas.EntityModel;

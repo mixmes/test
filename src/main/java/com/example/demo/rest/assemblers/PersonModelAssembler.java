@@ -1,11 +1,10 @@
-package com.example.demo.rest;
+package com.example.demo.rest.assemblers;
 
-import com.example.demo.controllers.PersonController;
+import com.example.demo.rest.controllers.PersonController;
 import com.example.demo.model.Person;
 
 import org.springframework.hateoas.EntityModel;
 import org.springframework.hateoas.server.RepresentationModelAssembler;
-import org.springframework.hateoas.*;
 import org.springframework.hateoas.server.mvc.WebMvcLinkBuilder;
 import org.springframework.stereotype.Service;
 

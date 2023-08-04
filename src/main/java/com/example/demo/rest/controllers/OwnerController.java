@@ -1,4 +1,4 @@
-package com.example.demo.controllers;
+package com.example.demo.rest.controllers;
 
 import com.example.demo.data.HouseDataService;
 import com.example.demo.data.OwnerDataService;
@@ -6,8 +6,8 @@ import com.example.demo.data.PersonDataService;
 import com.example.demo.model.House;
 import com.example.demo.model.Owner;
 import com.example.demo.model.Person;
-import com.example.demo.rest.HouseModelAssembler;
-import com.example.demo.rest.OwnerModelAssembler;
+import com.example.demo.rest.assemblers.HouseModelAssembler;
+import com.example.demo.rest.assemblers.OwnerModelAssembler;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.hateoas.CollectionModel;

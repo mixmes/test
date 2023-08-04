@@ -1,22 +1,21 @@
-package com.example.demo.controllers;
+package com.example.demo.rest.controllers;
 
 import com.example.demo.data.PersonDataService;
-import com.example.demo.model.House;
 import com.example.demo.model.Person;
-import com.example.demo.rest.PersonModelAssembler;
+import com.example.demo.rest.assemblers.PersonModelAssembler;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.hateoas.CollectionModel;
 import org.springframework.hateoas.EntityModel;
 import org.springframework.hateoas.server.mvc.WebMvcLinkBuilder;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Collection;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
 @RestController
+@Slf4j
 public class PersonController {
     @Autowired
     PersonDataService dataService;
@@ -36,6 +35,7 @@ public class PersonController {
     public CollectionModel<EntityModel<Person>> getAll(){
         List<EntityModel<Person>> house = dataService.getAll().stream().map(modelAssembler::toModel) //
                 .collect(Collectors.toList());
+        log.info("Give");
         return CollectionModel.of(house, WebMvcLinkBuilder.linkTo(WebMvcLinkBuilder.methodOn(PersonController.class).getAll()).withSelfRel());
     }
     @PostMapping("/persons/update")

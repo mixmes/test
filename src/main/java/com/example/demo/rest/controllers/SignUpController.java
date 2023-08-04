@@ -1,4 +1,4 @@
-package com.example.demo.controllers;
+package com.example.demo.rest.controllers;
 
 
 import com.example.demo.config.WebSecurityConfig;
@@ -25,8 +25,6 @@ import javax.swing.text.html.parser.Entity;
 @Import(WebSecurityConfig.class)
 public class SignUpController {
     Logger log = LogManager.getLogger();
-    @Autowired
-    protected AuthenticationManager authenticationManager;
 
     @Autowired
     private PersonDataService personDataService;
@@ -41,6 +39,8 @@ public class SignUpController {
             person.setPassword(user.getPassword());
             person.setUsername(user.getUsername());
             person.setRole(user.getRole());
+            person.setName("name");
+            person.setAge((short) 20);
             personDataService.save(person);
         }
         else if(user.getRole().equals("ADMIN")) {
